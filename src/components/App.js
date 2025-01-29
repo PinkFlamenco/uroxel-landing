@@ -147,6 +147,15 @@ const Reviews = () => {
 const OrderForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Отправляем форму
+    const formData = new FormData(e.target);
+    fetch('../../order.php', {
+      method: 'POST',
+      body: formData
+    }).then(() => {
+      // Показываем сообщение об успешной отправке
+      alert('¡Gracias por su pedido! Nuestro operador se pondrá en contacto con usted');
+    });
   };
 
   return (
@@ -215,35 +224,144 @@ const Footer = () => {
   const modalContent = {
     privacy: {
       title: "Política de Privacidad",
-      content: "Nuestra política de privacidad detalla cómo recopilamos, usamos y protegemos su información personal..."
+      content: `En Uroxel, nos comprometemos a proteger su privacidad. Esta política explica cómo recopilamos y utilizamos su información personal.
+
+Información que recopilamos:
+- Datos de contacto (nombre, teléfono, correo electrónico)
+- Información de pedidos
+- Datos de navegación
+
+Sus datos están seguros con nosotros y nunca los compartiremos con terceros sin su consentimiento.
+
+Para más información o consultas sobre privacidad, contáctenos en info@uroxel.netlify.app`
     },
     terms: {
       title: "Términos de Servicio",
-      content: "Al utilizar nuestro sitio web y productos, usted acepta cumplir con nuestros términos de servicio..."
+      content: `Al utilizar nuestro sitio web y realizar compras, usted acepta los siguientes términos:
+
+1. Productos y Precios
+- Los precios están en Pesos Mexicanos (MXN)
+- Nos reservamos el derecho de modificar precios
+- Las imágenes son ilustrativas
+
+2. Pedidos
+- La confirmación del pedido no garantiza la disponibilidad
+- Nos reservamos el derecho de rechazar pedidos
+- Los tiempos de entrega son estimados
+
+3. Uso del Sitio
+- El contenido es propiedad de Uroxel
+- Está prohibido el uso comercial sin autorización
+- Nos reservamos el derecho de modificar el sitio`
     },
     returns: {
       title: "Política de Devoluciones y Reembolsos",
-      content: "Aceptamos devoluciones dentro de los 30 días posteriores a la compra..."
+      content: `Política de Devoluciones:
+
+1. Plazo
+- 30 días desde la recepción del producto
+- El producto debe estar sin abrir
+- Debe conservar el empaque original
+
+2. Proceso
+- Contacte a nuestro servicio al cliente
+- Proporcione el número de pedido
+- Explique el motivo de la devolución
+
+3. Reembolso
+- Se procesará en 5-7 días hábiles
+- Se realizará por el mismo método de pago
+- No incluye gastos de envío originales`
     },
     shipping: {
       title: "Información de Envío",
-      content: "Realizamos envíos a todo México. El tiempo de entrega estimado es de 3-5 días hábiles..."
+      content: `Información de Envío:
+
+1. Tiempos de Entrega
+- Ciudad de México: 2-3 días hábiles
+- Resto de México: 3-5 días hábiles
+- Áreas remotas: hasta 7 días hábiles
+
+2. Costos de Envío
+- Envío gratis en pedidos superiores a $1000 MXN
+- Costo estándar: $99 MXN
+- Envío express disponible con cargo adicional
+
+3. Seguimiento
+- Recibirá un número de seguimiento por email
+- Puede rastrear su pedido en nuestra web`
     },
     cookies: {
       title: "Política de Cookies",
-      content: "Utilizamos cookies para mejorar su experiencia de navegación..."
+      content: `Utilizamos cookies para mejorar su experiencia en nuestro sitio web:
+
+1. Tipos de Cookies
+- Cookies esenciales: necesarias para el funcionamiento
+- Cookies de rendimiento: análisis de uso
+- Cookies de preferencias: recordar sus elecciones
+
+2. Uso
+- Mejorar la navegación
+- Recordar sus preferencias
+- Análisis de uso del sitio
+
+3. Control
+- Puede desactivar las cookies en su navegador
+- Algunas funciones pueden verse afectadas
+- Las cookies esenciales no se pueden desactivar`
     },
     disclaimer: {
       title: "Aviso Legal",
-      content: "Este producto es un dulce y no está destinado a diagnosticar, tratar, curar o prevenir ninguna enfermedad..."
+      content: `Aviso Legal:
+
+1. Producto
+- Este producto es un dulce natural
+- No es un medicamento
+- No está destinado a diagnosticar, tratar, curar o prevenir enfermedades
+
+2. Recomendaciones
+- Mantener fuera del alcance de los niños
+- Conservar en lugar fresco y seco
+- Consumir como parte de una dieta equilibrada
+
+3. Responsabilidad
+- Los resultados pueden variar
+- Consulte a su médico antes del consumo
+- No exceder la dosis recomendada`
     },
     contacts: {
       title: "Contactos",
-      content: "Email: info@uroxel.netlify.app\nTeléfono: +52 5512345678\nDirección: Av. Insurgentes Sur 1234, Col. Del Valle, Ciudad de México, CP 03100"
+      content: `Información de Contacto:
+
+Email: info@uroxel.netlify.app
+Teléfono: +52 5512315571
+WhatsApp: +52 5512315571
+
+Dirección:
+Av. Insurgentes Sur 1234
+Col. Del Valle
+Ciudad de México, CP 03100
+
+Horario de Atención:
+Lunes a Viernes: 9:00 - 18:00
+Sábado: 10:00 - 14:00`
     },
     about: {
       title: "Sobre Nosotros",
-      content: "Somos una empresa dedicada a crear dulces naturales de alta calidad..."
+      content: `Uroxel: Dulces Naturales para tu Bienestar
+
+Somos una empresa mexicana comprometida con su salud y bienestar. Desde 2020, nos dedicamos a crear dulces naturales que combinan lo mejor de la naturaleza con un sabor excepcional.
+
+Nuestra Misión:
+Ofrecer alternativas naturales y deliciosas que contribuyan al bienestar diario de nuestros clientes.
+
+Valores:
+- Calidad en cada producto
+- Compromiso con lo natural
+- Innovación constante
+- Satisfacción del cliente
+
+Trabajamos con los mejores ingredientes naturales, siguiendo estrictos estándares de calidad para garantizar productos excepcionales.`
     }
   };
 

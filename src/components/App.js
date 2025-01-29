@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogAction } from './ui/alert-dialog';
+import { Star } from 'lucide-react';
+
+
 // src/components/ui/alert-dialog.js
 import React from 'react';
 

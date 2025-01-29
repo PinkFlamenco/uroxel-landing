@@ -334,8 +334,8 @@ Para más información o consultas sobre privacidad, contáctenos en info@uroxel
       content: `Información de Contacto:
 
 Email: info@uroxel.netlify.app
-Teléfono: +52 5512315571
-WhatsApp: +52 5512315571
+Teléfono: +52 5512341671
+WhatsApp: +52 5512341671
 
 Dirección:
 Av. Insurgentes Sur 1234
@@ -383,8 +383,8 @@ Trabajamos con los mejores ingredientes naturales, siguiendo estrictos estándar
         <AlertDialog open={!!activeModal} onOpenChange={() => setActiveModal(null)}>
           <AlertDialogContent>
             <AlertDialogHeader>
-              <AlertDialogTitle>{activeModal && modalContent[activeModal].title}</AlertDialogTitle>
-              <AlertDialogDescription className="whitespace-pre-line">
+              <AlertDialogTitle className="text-gray-800">{activeModal && modalContent[activeModal].title}</AlertDialogTitle>
+              <AlertDialogDescription className="whitespace-pre-line text-gray-800">
                 {activeModal && modalContent[activeModal].content}
               </AlertDialogDescription>
             </AlertDialogHeader>
